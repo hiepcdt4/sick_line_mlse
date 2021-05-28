@@ -1,0 +1,3139 @@
+[FileInfo]
+CreatedBy=Andres Romero
+ModifiedBy=Andres Romero
+Description=Magnetic Lane Sensor
+CreationTime=08:55AM
+CreationDate=02-07-2020
+ModificationTime=08:55AM
+ModificationDate=02-07-2020
+FileName=IOuC_extern.eds
+FileVersion=0x0B
+FileRevision=0x0B
+EDSVersion=5.0
+
+[DeviceInfo]
+VendorName=SICK AG
+VendorNumber=0x01000056
+ProductName=Magnetic Lane Sensor
+BaudRate_10=1
+BaudRate_20=1
+BaudRate_50=1
+BaudRate_125=1
+BaudRate_250=1
+BaudRate_500=1
+BaudRate_800=1
+BaudRate_1000=1
+SimpleBootUpMaster=0
+SimpleBootUpSlave=1
+Granularity=0
+DynamicChannelsSupported=0
+CompactPDO=0
+GroupMessaging=0
+NrOfRXPDO=0
+NrOfTXPDO=7
+LSS_Supported=1
+
+[DummyUsage]
+Dummy0001=0
+Dummy0002=1
+Dummy0003=1
+Dummy0004=1
+Dummy0005=1
+Dummy0006=1
+Dummy0007=1
+
+[Comments]
+Lines=0
+
+[TypeDefinitions]
+SupportedObjects=1
+1=0x41
+
+[41]
+ParameterName=INT16_ARRAY
+ObjectType=0x5
+DataType=0x0007
+AccessType=ro
+DefaultValue=2720
+PDOMapping=0
+
+[MandatoryObjects]
+SupportedObjects=3
+1=0x1000
+2=0x1001
+3=0x1018
+
+[1000]
+ParameterName=Device Type
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x00
+PDOMapping=0
+
+[1001]
+ParameterName=Error Register
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
+
+[1018]
+ParameterName=Identity Object
+ObjectType=0x9
+SubNumber=5
+
+[1018sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+
+[1018sub1]
+ParameterName=Vendor Id
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x01000056
+PDOMapping=0
+
+[1018sub2]
+ParameterName=Product Code
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[1018sub3]
+ParameterName=Revision number
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[1018sub4]
+ParameterName=Serial number
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[OptionalObjects]
+SupportedObjects=23
+1=0x1008
+2=0x1009
+3=0x100A
+4=0x100C
+5=0x100D
+6=0x1010
+7=0x1017
+8=0x1200
+9=0x1800
+10=0x1801
+11=0x1802
+12=0x1803
+13=0x1804
+14=0x1805
+15=0x1806
+16=0x1A00
+17=0x1A01
+18=0x1A02
+19=0x1A03
+20=0x1A04
+21=0x1A05
+22=0x1A06
+23=0x1F80
+
+[1008]
+ParameterName=Manufacturer Device Name
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+PDOMapping=0
+
+[1009]
+ParameterName=Manufacturer Hardware Version
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+PDOMapping=0
+
+[100A]
+ParameterName=Manufacturer Software Version
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+PDOMapping=0
+
+[100C]
+ParameterName=Guard Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[100D]
+ParameterName=Life Time Factor
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x00
+PDOMapping=0
+
+[1010]
+ParameterName=Store Parameter Field
+ObjectType=0x8
+SubNumber=2
+
+[1010sub0]
+ParameterName=Store Parameter Field
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1010sub1]
+ParameterName=Save all Parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x02
+PDOMapping=0
+
+[1017]
+ParameterName=Producer Heartbeat Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+HighLimit=32767
+
+[1200]
+ParameterName=Server SDO Parameter 0
+ObjectType=0x9
+SubNumber=3
+
+[1200sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+LowLimit=0x02
+HighLimit=0x02
+
+[1200sub1]
+ParameterName=COB ID Client to Server
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=$NODEID+0x600
+PDOMapping=0
+
+[1200sub2]
+ParameterName=COB ID Server to Client
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=$NODEID+0x580
+PDOMapping=0
+
+[1800]
+ParameterName=Transmit PDO Communication Parameter 0
+ObjectType=0x9
+SubNumber=5
+
+[1800sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+
+[1800sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x180
+PDOMapping=0
+LowLimit=0x00000181
+HighLimit=0xFFFFFFFF
+
+[1800sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0xFF
+PDOMapping=0
+
+[1800sub4]
+ParameterName=Compatibility Entry
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[1800sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+
+[1801]
+ParameterName=Transmit PDO Communication Parameter 1
+ObjectType=0x9
+SubNumber=5
+
+[1801sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+
+[1801sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x280
+PDOMapping=0
+LowLimit=0x00000281
+HighLimit=0xFFFFFFFF
+
+[1801sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0xFF
+PDOMapping=0
+
+[1801sub4]
+ParameterName=Compatibility Entry
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[1801sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+
+[1802]
+ParameterName=Transmit PDO Communication Parameter 2
+ObjectType=0x9
+SubNumber=5
+
+[1802sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+
+[1802sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x80000380
+PDOMapping=0
+LowLimit=0x00000381
+HighLimit=0xFFFFFFFF
+
+[1802sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0xFF
+PDOMapping=0
+
+[1802sub4]
+ParameterName=Compatibility Entry
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[1802sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+
+[1803]
+ParameterName=Transmit PDO Communication Parameter 3
+ObjectType=0x9
+SubNumber=5
+
+[1803sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+
+[1803sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x80000480
+PDOMapping=0
+LowLimit=0x00000481
+HighLimit=0xFFFFFFFF
+
+[1803sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0xFF
+PDOMapping=0
+
+[1803sub4]
+ParameterName=Compatibility Entry
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[1803sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+
+[1804]
+ParameterName=Transmit PDO Communication Parameter 4
+ObjectType=0x9
+SubNumber=5
+
+[1804sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+
+[1804sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x80000000
+PDOMapping=0
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+
+[1804sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0xFF
+PDOMapping=0
+
+[1804sub4]
+ParameterName=Compatibility Entry
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[1804sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+
+[1805]
+ParameterName=Transmit PDO Communication Parameter 5
+ObjectType=0x9
+SubNumber=5
+
+[1805sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+
+[1805sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x80000000
+PDOMapping=0
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+
+[1805sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0xFF
+PDOMapping=0
+
+[1805sub4]
+ParameterName=Compatibility Entry
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[1805sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+
+[1806]
+ParameterName=Transmit PDO Communication Parameter 6
+ObjectType=0x9
+SubNumber=5
+
+[1806sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+
+[1806sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x80000000
+PDOMapping=0
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+
+[1806sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0xFF
+PDOMapping=0
+
+[1806sub4]
+ParameterName=Compatibility Entry
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[1806sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+
+[1A00]
+ParameterName=Transmit PDO Mapping Parameter 0
+ObjectType=0x9
+SubNumber=6
+
+[1A00sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=5
+PDOMapping=0
+LowLimit=0
+HighLimit=5
+
+[1A00sub1]
+ParameterName=PDO Mapping Entry
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20210110
+PDOMapping=0
+
+[1A00sub2]
+ParameterName=PDO Mapping Entry_2
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20210210
+PDOMapping=0
+
+[1A00sub3]
+ParameterName=PDO Mapping Entry_3
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20210310
+PDOMapping=0
+
+[1A00sub4]
+ParameterName=PDO Mapping Entry_4
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20210408
+PDOMapping=0
+
+[1A00sub5]
+ParameterName=PDO Mapping Entry_5
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20220008
+PDOMapping=0
+
+[1A01]
+ParameterName=Transmit PDO Mapping Parameter 1
+ObjectType=0x9
+SubNumber=7
+
+[1A01sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=6
+PDOMapping=0
+LowLimit=0
+HighLimit=6
+
+[1A01sub1]
+ParameterName=PDO Mapping Entry
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20210508
+PDOMapping=0
+
+[1A01sub2]
+ParameterName=PDO Mapping Entry_2
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20210608
+PDOMapping=0
+
+[1A01sub3]
+ParameterName=PDO Mapping Entry_3
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20210708
+PDOMapping=0
+
+[1A01sub4]
+ParameterName=PDO Mapping Entry_4
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20210B08
+PDOMapping=0
+
+[1A01sub5]
+ParameterName=PDO Mapping Entry_5
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20210C08
+PDOMapping=0
+
+[1A01sub6]
+ParameterName=PDO Mapping Entry_6
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20210D08
+PDOMapping=0
+
+[1A02]
+ParameterName=Transmit PDO Mapping Parameter 2
+ObjectType=0x9
+SubNumber=3
+
+[1A02sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=2
+PDOMapping=0
+LowLimit=0
+HighLimit=2
+
+[1A02sub1]
+ParameterName=PDO Mapping Entry
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x202E0120
+PDOMapping=0
+
+[1A02sub2]
+ParameterName=PDO Mapping Entry_2
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x202E0220
+PDOMapping=0
+
+[1A03]
+ParameterName=Transmit PDO Mapping Parameter 3
+ObjectType=0x9
+SubNumber=5
+
+[1A03sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=4
+PDOMapping=0
+LowLimit=0
+HighLimit=4
+
+[1A03sub1]
+ParameterName=PDO Mapping Entry
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20300110
+PDOMapping=0
+
+[1A03sub2]
+ParameterName=PDO Mapping Entry_2
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20300210
+PDOMapping=0
+
+[1A03sub3]
+ParameterName=PDO Mapping Entry_3
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20300310
+PDOMapping=0
+
+[1A03sub4]
+ParameterName=PDO Mapping Entry_4
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20350010
+PDOMapping=0
+
+[1A04]
+ParameterName=Transmit PDO Mapping Parameter 4
+ObjectType=0x9
+SubNumber=5
+
+[1A04sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=4
+PDOMapping=0
+LowLimit=0
+HighLimit=4
+
+[1A04sub1]
+ParameterName=PDO Mapping Entry
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20310210
+PDOMapping=0
+
+[1A04sub2]
+ParameterName=PDO Mapping Entry_2
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20310310
+PDOMapping=0
+
+[1A04sub3]
+ParameterName=PDO Mapping Entry_3
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20310410
+PDOMapping=0
+
+[1A04sub4]
+ParameterName=PDO Mapping Entry_4
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20350010
+PDOMapping=0
+
+[1A05]
+ParameterName=Transmit PDO Mapping Parameter 5
+ObjectType=0x9
+SubNumber=5
+
+[1A05sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=4
+PDOMapping=0
+LowLimit=0
+HighLimit=4
+
+[1A05sub1]
+ParameterName=PDO Mapping Entry
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20330110
+PDOMapping=0
+
+[1A05sub2]
+ParameterName=PDO Mapping Entry_2
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20330210
+PDOMapping=0
+
+[1A05sub3]
+ParameterName=PDO Mapping Entry_3
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20330310
+PDOMapping=0
+
+[1A05sub4]
+ParameterName=PDO Mapping Entry_4
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20350010
+PDOMapping=0
+
+[1A06]
+ParameterName=Transmit PDO Mapping Parameter 6
+ObjectType=0x9
+SubNumber=5
+
+[1A06sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=4
+PDOMapping=0
+LowLimit=0
+HighLimit=4
+
+[1A06sub1]
+ParameterName=PDO Mapping Entry
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20340110
+PDOMapping=0
+
+[1A06sub2]
+ParameterName=PDO Mapping Entry_2
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20340210
+PDOMapping=0
+
+[1A06sub3]
+ParameterName=PDO Mapping Entry_3
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20340310
+PDOMapping=0
+
+[1A06sub4]
+ParameterName=PDO Mapping Entry_4
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20350010
+PDOMapping=0
+
+[1F80]
+ParameterName=NMTStartup
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[ManufacturerObjects]
+SupportedObjects=48
+1=0x2000
+2=0x200E
+3=0x2019
+4=0x2020
+5=0x2021
+6=0x2022
+7=0x2023
+8=0x2024
+9=0x2025
+10=0x2026
+11=0x2027
+12=0x2028
+13=0x2029
+14=0x202A
+15=0x202B
+16=0x202C
+17=0x202D
+18=0x202E
+19=0x202F
+20=0x2030
+21=0x2031
+22=0x2032
+23=0x2033
+24=0x2034
+25=0x2035
+26=0x2036
+27=0x2040
+28=0x2041
+29=0x2042
+30=0x2043
+31=0x2044
+32=0x2045
+33=0x2046
+34=0x2047
+35=0x2048
+36=0x2049
+37=0x204A
+38=0x204B
+39=0x204C
+40=0x204D
+41=0x204E
+42=0x204F
+43=0x2050
+44=0x2051
+45=0x2052
+46=0x2053
+47=0x2070
+48=0x2080
+
+[2000]
+ParameterName=Hall Values
+ObjectType=0x9
+SubNumber=169
+
+[200E]
+ParameterName=Firmware Version AuC
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+PDOMapping=0
+
+[2000sub0]
+ParameterName=Number of Hall Elements
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=168
+PDOMapping=0
+
+[2000sub1]
+ParameterName=Hall Value Element 1
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub2]
+ParameterName=Hall Value Element 2
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub3]
+ParameterName=Hall Value Element 3
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub4]
+ParameterName=Hall Value Element 4
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub5]
+ParameterName=Hall Value Element 5
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub6]
+ParameterName=Hall Value Element 6
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub7]
+ParameterName=Hall Value Element 7
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub8]
+ParameterName=Hall Value Element 8
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub9]
+ParameterName=Hall Value Element 9
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000subA]
+ParameterName=Hall Value Element 10
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000subB]
+ParameterName=Hall Value Element 11
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000subC]
+ParameterName=Hall Value Element 12
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000subD]
+ParameterName=Hall Value Element 13
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000subE]
+ParameterName=Hall Value Element 14
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000subF]
+ParameterName=Hall Value Element 15
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub10]
+ParameterName=Hall Value Element 16
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub11]
+ParameterName=Hall Value Element 17
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub12]
+ParameterName=Hall Value Element 18
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub13]
+ParameterName=Hall Value Element 19
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub14]
+ParameterName=Hall Value Element 20
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub15]
+ParameterName=Hall Value Element 21
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub16]
+ParameterName=Hall Value Element 22
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub17]
+ParameterName=Hall Value Element 23
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub18]
+ParameterName=Hall Value Element 24
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub19]
+ParameterName=Hall Value Element 25
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub1A]
+ParameterName=Hall Value Element 26
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub1B]
+ParameterName=Hall Value Element 27
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub1C]
+ParameterName=Hall Value Element 28
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub1D]
+ParameterName=Hall Value Element 29
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub1E]
+ParameterName=Hall Value Element 30
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub1F]
+ParameterName=Hall Value Element 31
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub20]
+ParameterName=Hall Value Element 32
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub21]
+ParameterName=Hall Value Element 33
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub22]
+ParameterName=Hall Value Element 34
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub23]
+ParameterName=Hall Value Element 35
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub24]
+ParameterName=Hall Value Element 36
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub25]
+ParameterName=Hall Value Element 37
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub26]
+ParameterName=Hall Value Element 38
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub27]
+ParameterName=Hall Value Element 39
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub28]
+ParameterName=Hall Value Element 40
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub29]
+ParameterName=Hall Value Element 41
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub2A]
+ParameterName=Hall Value Element 42
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub2B]
+ParameterName=Hall Value Element 43
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub2C]
+ParameterName=Hall Value Element 44
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub2D]
+ParameterName=Hall Value Element 45
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub2E]
+ParameterName=Hall Value Element 46
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub2F]
+ParameterName=Hall Value Element 47
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub30]
+ParameterName=Hall Value Element 48
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub31]
+ParameterName=Hall Value Element 49
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub32]
+ParameterName=Hall Value Element 50
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub33]
+ParameterName=Hall Value Element 51
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub34]
+ParameterName=Hall Value Element 52
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub35]
+ParameterName=Hall Value Element 53
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub36]
+ParameterName=Hall Value Element 54
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub37]
+ParameterName=Hall Value Element 55
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub38]
+ParameterName=Hall Value Element 56
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub39]
+ParameterName=Hall Value Element 57
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub3A]
+ParameterName=Hall Value Element 58
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub3B]
+ParameterName=Hall Value Element 59
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub3C]
+ParameterName=Hall Value Element 60
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub3D]
+ParameterName=Hall Value Element 61
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub3E]
+ParameterName=Hall Value Element 62
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub3F]
+ParameterName=Hall Value Element 63
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub40]
+ParameterName=Hall Value Element 64
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub41]
+ParameterName=Hall Value Element 65
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub42]
+ParameterName=Hall Value Element 66
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub43]
+ParameterName=Hall Value Element 67
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub44]
+ParameterName=Hall Value Element 68
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub45]
+ParameterName=Hall Value Element 69
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub46]
+ParameterName=Hall Value Element 70
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub47]
+ParameterName=Hall Value Element 71
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub48]
+ParameterName=Hall Value Element 72
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub49]
+ParameterName=Hall Value Element 73
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub4A]
+ParameterName=Hall Value Element 74
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub4B]
+ParameterName=Hall Value Element 75
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub4C]
+ParameterName=Hall Value Element 76
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub4D]
+ParameterName=Hall Value Element 77
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub4E]
+ParameterName=Hall Value Element 78
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub4F]
+ParameterName=Hall Value Element 79
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub50]
+ParameterName=Hall Value Element 80
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub51]
+ParameterName=Hall Value Element 81
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub52]
+ParameterName=Hall Value Element 82
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub53]
+ParameterName=Hall Value Element 83
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub54]
+ParameterName=Hall Value Element 84
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub55]
+ParameterName=Hall Value Element 85
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub56]
+ParameterName=Hall Value Element 86
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub57]
+ParameterName=Hall Value Element 87
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub58]
+ParameterName=Hall Value Element 88
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub59]
+ParameterName=Hall Value Element 89
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub5A]
+ParameterName=Hall Value Element 90
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub5B]
+ParameterName=Hall Value Element 91
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub5C]
+ParameterName=Hall Value Element 92
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub5D]
+ParameterName=Hall Value Element 93
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub5E]
+ParameterName=Hall Value Element 94
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub5F]
+ParameterName=Hall Value Element 95
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub60]
+ParameterName=Hall Value Element 96
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub61]
+ParameterName=Hall Value Element 97
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub62]
+ParameterName=Hall Value Element 98
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub63]
+ParameterName=Hall Value Element 99
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub64]
+ParameterName=Hall Value Element 100
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub65]
+ParameterName=Hall Value Element 101
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub66]
+ParameterName=Hall Value Element 102
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub67]
+ParameterName=Hall Value Element 103
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub68]
+ParameterName=Hall Value Element 104
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub69]
+ParameterName=Hall Value Element 105
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub6A]
+ParameterName=Hall Value Element 106
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub6B]
+ParameterName=Hall Value Element 107
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub6C]
+ParameterName=Hall Value Element 108
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub6D]
+ParameterName=Hall Value Element 109
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub6E]
+ParameterName=Hall Value Element 110
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub6F]
+ParameterName=Hall Value Element 111
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub70]
+ParameterName=Hall Value Element 112
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub71]
+ParameterName=Hall Value Element 113
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub72]
+ParameterName=Hall Value Element 114
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub73]
+ParameterName=Hall Value Element 115
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub74]
+ParameterName=Hall Value Element 116
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub75]
+ParameterName=Hall Value Element 117
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub76]
+ParameterName=Hall Value Element 118
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub77]
+ParameterName=Hall Value Element 119
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub78]
+ParameterName=Hall Value Element 120
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub79]
+ParameterName=Hall Value Element 121
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub7A]
+ParameterName=Hall Value Element 122
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub7B]
+ParameterName=Hall Value Element 123
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub7C]
+ParameterName=Hall Value Element 124
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub7D]
+ParameterName=Hall Value Element 125
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub7E]
+ParameterName=Hall Value Element 126
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub7F]
+ParameterName=Hall Value Element 127
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub80]
+ParameterName=Hall Value Element 128
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub81]
+ParameterName=Hall Value Element 129
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub82]
+ParameterName=Hall Value Element 130
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub83]
+ParameterName=Hall Value Element 131
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub84]
+ParameterName=Hall Value Element 132
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub85]
+ParameterName=Hall Value Element 133
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub86]
+ParameterName=Hall Value Element 134
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub87]
+ParameterName=Hall Value Element 135
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub88]
+ParameterName=Hall Value Element 136
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub89]
+ParameterName=Hall Value Element 137
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub8A]
+ParameterName=Hall Value Element 138
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub8B]
+ParameterName=Hall Value Element 139
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub8C]
+ParameterName=Hall Value Element 140
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub8D]
+ParameterName=Hall Value Element 141
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub8E]
+ParameterName=Hall Value Element 142
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub8F]
+ParameterName=Hall Value Element 143
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub90]
+ParameterName=Hall Value Element 144
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub91]
+ParameterName=Hall Value Element 145
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub92]
+ParameterName=Hall Value Element 146
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub93]
+ParameterName=Hall Value Element 147
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub94]
+ParameterName=Hall Value Element 148
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub95]
+ParameterName=Hall Value Element 149
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub96]
+ParameterName=Hall Value Element 150
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub97]
+ParameterName=Hall Value Element 151
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub98]
+ParameterName=Hall Value Element 152
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub99]
+ParameterName=Hall Value Element 153
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub9A]
+ParameterName=Hall Value Element 154
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub9B]
+ParameterName=Hall Value Element 155
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub9C]
+ParameterName=Hall Value Element 156
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub9D]
+ParameterName=Hall Value Element 157
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub9E]
+ParameterName=Hall Value Element 158
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000sub9F]
+ParameterName=Hall Value Element 159
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000subA0]
+ParameterName=Hall Value Element 160
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000subA1]
+ParameterName=Hall Value Element 161
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000subA2]
+ParameterName=Hall Value Element 162
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000subA3]
+ParameterName=Hall Value Element 163
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000subA4]
+ParameterName=Hall Value Element 164
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000subA5]
+ParameterName=Hall Value Element 165
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000subA6]
+ParameterName=Hall Value Element 166
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000subA7]
+ParameterName=Hall Value Element 167
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2000subA8]
+ParameterName=Hall Value Element 168
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2006]
+ParameterName=Variant configuration
+ObjectType=0x9
+SubNumber=3
+
+[2006sub0]
+ParameterName=Number of Variant configuration
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[2006sub1]
+ParameterName=Variant TPDO1
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[2006sub2]
+ParameterName=Variant MEMS
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[2019]
+ParameterName=Order Number
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+
+[2020]
+ParameterName=Passwort
+ObjectType=0x7
+DataType=0x0009
+AccessType=wo
+PDOMapping=0
+
+[2021]
+ParameterName=LCPs
+ObjectType=0x9
+SubNumber=14
+
+[2021sub0]
+ParameterName=Number of LCPs
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=13
+PDOMapping=0
+
+[2021sub1]
+ParameterName=LCP1
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[2021sub2]
+ParameterName=LCP2
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[2021sub3]
+ParameterName=LCP3
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[2021sub4]
+ParameterName=#LCP
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=1
+
+[2021sub5]
+ParameterName=LCP1_width
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=1
+
+[2021sub6]
+ParameterName=LCP2_width
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=1
+
+[2021sub7]
+ParameterName=LCP3_width
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=1
+
+[2021sub8]
+ParameterName=LCP1_Combi
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+
+[2021sub9]
+ParameterName=LCP2_Combi
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+
+[2021subA]
+ParameterName=LCP3_Combi
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+
+[2021subB]
+ParameterName=Field Level 1
+ObjectType=0x7
+DataType=0x0002
+AccessType=ro
+PDOMapping=1
+
+[2021subC]
+ParameterName=Field Level 2
+ObjectType=0x7
+DataType=0x0002
+AccessType=ro
+PDOMapping=1
+
+[2021subD]
+ParameterName=Field Level 3
+ObjectType=0x7
+DataType=0x0002
+AccessType=ro
+PDOMapping=1
+
+[2022]
+ParameterName=Status
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=1
+
+[2023]
+ParameterName=Track Level
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+
+[2024]
+ParameterName=Field Level
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+
+[2025]
+ParameterName=Min Level
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+
+[2026]
+ParameterName=Offset
+ObjectType=0x7
+DataType=0x0003
+AccessType=rw
+PDOMapping=0
+
+[2027]
+ParameterName=Sensor flipped
+ObjectType=0x7
+DataType=0x0001
+AccessType=rw
+PDOMapping=0
+
+[2028]
+ParameterName=Markers
+ObjectType=0x9
+SubNumber=4
+
+[2028sub0]
+ParameterName=NrOfObjects
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[2028sub1]
+ParameterName=Use Markers
+ObjectType=0x7
+DataType=0x0001
+AccessType=rw
+PDOMapping=0
+
+[2028sub2]
+ParameterName=Marker Style
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[2028sub3]
+ParameterName=Fail Safe Mode
+ObjectType=0x7
+DataType=0x0001
+AccessType=rw
+PDOMapping=0
+
+[2029]
+ParameterName=Lock Teach
+ObjectType=0x7
+DataType=0x0001
+AccessType=rw
+PDOMapping=0
+
+[202A]
+ParameterName=Set Param to Default
+ObjectType=0x7
+DataType=0x0001
+AccessType=wo
+PDOMapping=0
+
+[202B]
+ParameterName=Trigger User Offset Calibration
+ObjectType=0x7
+DataType=0x0001
+AccessType=wo
+PDOMapping=0
+
+[202C]
+ParameterName=Trigger Zero Position Teach
+ObjectType=0x7
+DataType=0x0001
+AccessType=wo
+PDOMapping=0
+
+[202D]
+ParameterName=Detection config
+ObjectType=0x9
+SubNumber=6
+
+[202Dsub0]
+ParameterName=Number of Detection config
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+
+[202Dsub1]
+ParameterName=First Level
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[202Dsub2]
+ParameterName=Last Level
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[202Dsub3]
+ParameterName=Averaging Magnetic
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[202Dsub4]
+ParameterName=Averaging Inertial
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[202Dsub5]
+ParameterName=Tape Polarity
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[202E]
+ParameterName=Bitmap
+ObjectType=0x9
+SubNumber=3
+
+[202Esub0]
+ParameterName=Number of Bitmap
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[202Esub1]
+ParameterName=Byte 1..4
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[202Esub2]
+ParameterName=Byte 5..8
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[202Esub3]
+ParameterName=Byte 9..12
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[202Esub4]
+ParameterName=Byte 13..16
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
+
+[202F]
+ParameterName=Bitmap config
+ObjectType=0x9
+SubNumber=3
+
+[202Fsub0]
+ParameterName=Number of Bitmap config
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[202Fsub1]
+ParameterName=Threshold
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+
+[202Fsub2]
+ParameterName=Mode
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+PDOMapping=0
+
+[2030]
+ParameterName=Orientation Euler Angles
+ObjectType=0x9
+SubNumber=4
+
+[2030sub0]
+ParameterName=Number of Orientation Euler Angles
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[2030sub1]
+ParameterName=Roll
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[2030sub2]
+ParameterName=Pitch
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[2030sub3]
+ParameterName=Yaw
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[2031]
+ParameterName=Orientation Quaternion
+ObjectType=0x9
+SubNumber=5
+
+[2031sub0]
+ParameterName=Number of Orientation Quaternion
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+
+[2031sub1]
+ParameterName=w (real part)
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2031sub2]
+ParameterName=x (imaginary part)
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[2031sub3]
+ParameterName=y (imaginary part)
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[2031sub4]
+ParameterName=z (imaginary part)
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[2032]
+ParameterName=IMU Settings
+ObjectType=0x9
+SubNumber=3
+
+[2032sub0]
+ParameterName=Number of IMU Settings
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[2032sub1]
+ParameterName=Reset Yaw
+ObjectType=0x7
+DataType=0x0001
+AccessType=wo
+PDOMapping=0
+
+[2032sub2]
+ParameterName=Reset Acceleration Peaks
+ObjectType=0x7
+DataType=0x0001
+AccessType=wo
+PDOMapping=0
+
+[2033]
+ParameterName=Acceleration
+ObjectType=0x9
+SubNumber=4
+
+[2033sub0]
+ParameterName=Number of Acceleration
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[2033sub1]
+ParameterName=x-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[2033sub2]
+ParameterName=y-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[2033sub3]
+ParameterName=z-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[2034]
+ParameterName=Angular Velocity
+ObjectType=0x9
+SubNumber=4
+
+[2034sub0]
+ParameterName=Number of Angular Velocity
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[2034sub1]
+ParameterName=x-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[2034sub2]
+ParameterName=y-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[2034sub3]
+ParameterName=z-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[2035]
+ParameterName=Sample Timestamp
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=1
+
+[2036]
+ParameterName=Long Term Timestamp
+ObjectType=0x7
+DataType=0x001b
+AccessType=rw
+PDOMapping=0
+
+[2040]
+ParameterName=Acceleration Peak Current Max
+ObjectType=0x9
+SubNumber=4
+
+[2040sub0]
+ParameterName=Number of Acceleration Peak Current Max
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[2040sub1]
+ParameterName=x-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2040sub2]
+ParameterName=y-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2040sub3]
+ParameterName=z-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2041]
+ParameterName=Acceleration Peak Current Timestamp
+ObjectType=0x7
+DataType=0x001b
+AccessType=ro
+PDOMapping=0
+
+[2042]
+ParameterName=Acceleration Peak Current Dataset x-axis
+ObjectType=0x5
+DataType=0x0041
+AccessType=ro
+PDOMapping=0
+
+[2043]
+ParameterName=Acceleration Peak Current Dataset y-axis
+ObjectType=0x5
+DataType=0x0041
+AccessType=ro
+PDOMapping=0
+
+[2044]
+ParameterName=Acceleration Peak Current Dataset z-axis
+ObjectType=0x5
+DataType=0x0041
+AccessType=ro
+PDOMapping=0
+
+[2045]
+ParameterName=Acceleration Peak Stored 1 Max
+ObjectType=0x9
+SubNumber=4
+
+[2045sub0]
+ParameterName=Number of Acceleration Peak Stored 1 Max
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[2045sub1]
+ParameterName=x-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2045sub2]
+ParameterName=y-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2045sub3]
+ParameterName=z-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2046]
+ParameterName=Acceleration Peak Stored 1 Timestamp
+ObjectType=0x7
+DataType=0x001b
+AccessType=ro
+PDOMapping=0
+
+[2047]
+ParameterName=Acceleration Peak Stored 1 Dataset x-axis
+ObjectType=0x5
+DataType=0x0041
+AccessType=ro
+PDOMapping=0
+
+[2048]
+ParameterName=Acceleration Peak Stored 1 Dataset y-axis
+ObjectType=0x5
+DataType=0x0041
+AccessType=ro
+PDOMapping=0
+
+[2049]
+ParameterName=Acceleration Peak Stored 1 Dataset z-axis
+ObjectType=0x5
+DataType=0x0041
+AccessType=ro
+PDOMapping=0
+
+[204A]
+ParameterName=Acceleration Peak Stored 2 Max
+ObjectType=0x9
+SubNumber=4
+
+[204Asub0]
+ParameterName=Number of Acceleration Peak Stored 2 Max
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[204Asub1]
+ParameterName=x-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[204Asub2]
+ParameterName=y-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[204Asub3]
+ParameterName=z-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[204B]
+ParameterName=Acceleration Peak Stored 2 Timestamp
+ObjectType=0x7
+DataType=0x001b
+AccessType=ro
+PDOMapping=0
+
+[204C]
+ParameterName=Acceleration Peak Stored 3 Max
+ObjectType=0x9
+SubNumber=4
+
+[204Csub0]
+ParameterName=Number of Acceleration Peak Stored 3 Max
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[204Csub1]
+ParameterName=x-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[204Csub2]
+ParameterName=y-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[204Csub3]
+ParameterName=z-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[204D]
+ParameterName=Acceleration Peak Stored 3 Timestamp
+ObjectType=0x7
+DataType=0x001b
+AccessType=ro
+PDOMapping=0
+
+[204E]
+ParameterName=Acceleration Peak Stored 4 Max
+ObjectType=0x9
+SubNumber=4
+
+[204Esub0]
+ParameterName=Number of Acceleration Peak Stored 4 Max
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[204Esub1]
+ParameterName=x-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[204Esub2]
+ParameterName=y-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[204Esub3]
+ParameterName=z-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[204F]
+ParameterName=Acceleration Peak Stored 4 Timestamp
+ObjectType=0x7
+DataType=0x001b
+AccessType=ro
+PDOMapping=0
+
+[2050]
+ParameterName=Acceleration Peak Stored 5 Max
+ObjectType=0x9
+SubNumber=4
+
+[2050sub0]
+ParameterName=Number of Acceleration Peak Stored 5 Max
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[2050sub1]
+ParameterName=x-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2050sub2]
+ParameterName=y-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2050sub3]
+ParameterName=z-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2051]
+ParameterName=Acceleration Peak Stored 5 Timestamp
+ObjectType=0x7
+DataType=0x001b
+AccessType=ro
+PDOMapping=0
+
+[2052]
+ParameterName=Acceleration Max Since Last Read
+ObjectType=0x9
+SubNumber=4
+
+[2052sub0]
+ParameterName=Number of Acceleration Max Since Last Read
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[2052sub1]
+ParameterName=x-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2052sub2]
+ParameterName=y-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2052sub3]
+ParameterName=z-axis
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=0
+
+[2053]
+ParameterName=Acceleration Peak Detection Level
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+PDOMapping=0
+
+[2070]
+ParameterName=Temperature
+ObjectType=0x9
+SubNumber=8
+
+[2070sub0]
+ParameterName=Number of Temperature
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=7
+PDOMapping=0
+
+[2070sub1]
+ParameterName=Current temperature
+ObjectType=0x7
+DataType=0x0002
+AccessType=ro
+PDOMapping=0
+
+[2070sub2]
+ParameterName=Max. temperature all time
+ObjectType=0x7
+DataType=0x0002
+AccessType=ro
+PDOMapping=0
+
+[2070sub3]
+ParameterName=Min. temperature all time
+ObjectType=0x7
+DataType=0x0002
+AccessType=ro
+PDOMapping=0
+
+[2070sub4]
+ParameterName=Max. temperature since last reset
+ObjectType=0x7
+DataType=0x0002
+AccessType=rw
+PDOMapping=0
+
+[2070sub5]
+ParameterName=Min. temperature since last reset
+ObjectType=0x7
+DataType=0x0002
+AccessType=rw
+PDOMapping=0
+
+[2070sub6]
+ParameterName=Upper temperature threshold
+ObjectType=0x7
+DataType=0x0002
+AccessType=rw
+PDOMapping=0
+
+[2070sub7]
+ParameterName=Lower temperature threshold
+ObjectType=0x7
+DataType=0x0002
+AccessType=rw
+PDOMapping=0
+
+[2080]
+ParameterName=Event code
+ObjectType=0x9
+SubNumber=6
+
+[2080sub0]
+ParameterName=Number of Event code
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+
+[2080sub1]
+ParameterName=Reset Event Flag
+ObjectType=0x7
+DataType=0x0001
+AccessType=wo
+PDOMapping=0
+
+[2080sub2]
+ParameterName=Event source
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
+
+[2080sub3]
+ParameterName=Inertial
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
+
+[2080sub4]
+ParameterName=Magnetic Field
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
+
+[2080sub5]
+ParameterName=Temperature
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
